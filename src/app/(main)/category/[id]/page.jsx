@@ -1,6 +1,7 @@
 import LeftSidebar from "@/components/shared/homepage/news/LeftSidebar";
+import NewsCard from "@/components/shared/homepage/news/NewsCard";
 import RightSidebar from "@/components/shared/homepage/news/RightSidebar";
-import { getCategories, getNewsByCategoryId } from "@/lib/data";
+import { getCategories, getNewsByCategoryId} from "@/lib/data";
 
 
 
@@ -25,7 +26,7 @@ const NewsCategoryPage = async ({params}) => {
                  
         {news.length > 0 ?
           news.map((n) => {
-             return (<div key={n._id} className="p-6 rounded-md">{n.title}</div>
+             return (<NewsCard key={n._id} news={n}>{n.title}</NewsCard>
              );
           }) : <h2 className="font-bold text-4xl text-center my-7">No news found!</h2>
         }
