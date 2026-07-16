@@ -22,6 +22,14 @@ const RegisterPage = () => {
           });
 
           console.log(res, error);
+
+          if(error){{
+              alert(error.message)
+          }}
+
+          if(res){
+              alert("Signup successful")
+          }
      }
 
      console.log(watch("email"));
