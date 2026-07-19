@@ -1,12 +1,12 @@
 export const metadata = {
-  title: "Dragon News - about us",
+  title: "Dragon News - about",
 
 };
 
 const AboutPage = () => {
     return (
         <div>
-            About us page
+            About page
         </div>
     );
 };
